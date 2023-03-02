@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "4a6dba87-4f08-494f-ba4b-d05049183964",
+		"name": "Dummy REST API Example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26075556"
+	},
+	"item": [
+		{
+			"name": "info employee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{employeeById_url}}/14",
+					"host": [
+						"{{employeeById_url}}"
+					],
+					"path": [
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "new employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employee_name\": \"John\",\r\n    \"employee_salary\": 40000,\r\n    \"employee_age\": 35\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{create_url}}",
+					"host": [
+						"{{create_url}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "employeeById_url",
+			"value": "https://dummy.restapiexample.com/api/v1/employee/",
+			"type": "string"
+		},
+		{
+			"key": "create_url",
+			"value": "https://dummy.restapiexample.com/api/v1/create",
+			"type": "string"
+		}
+	]
+}
